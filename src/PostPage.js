@@ -10,16 +10,18 @@ const PostPage = ({ posts, handleDelete }) => {
         {post && (
           <>
             <h2>{post.title}</h2>
-            <p className="postDate">{post.datetime}</p>
-            <p className="postBody">{post.body}</p>
+            {/* <p className="postDate">{post.datetime}</p> */}
+            <p className="postBody">
+            <a  href={post.body} target="blank">Turnillo Link</a>
+            </p>
             <Link to={`/edit/${post.id}`}>
-              <button className="editButton">Edit Post</button>
+              <button className="editButton">Edit Bidmax</button>
             </Link>
             <button
               className="deleteButton"
               onClick={() => handleDelete(post.id)}
             >
-              Delete Post
+              Delete Bidmax
             </button>
           </>
         )}

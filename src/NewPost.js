@@ -9,7 +9,7 @@ const NewPost = ({
 }) => {
   return (
     <main className="NewPost">
-      <h2>new post</h2>
+      <h2>new bidmax</h2>
       <form className="newPostForm" onSubmit={handleSubmit}>
         <label htmlFor="postTitle">Title:</label>
         <input
@@ -19,7 +19,7 @@ const NewPost = ({
           value={postTitle}
           onChange={(e) => setPostTitle(e.target.value)}
         />
-        <label htmlFor="postBody">Post:</label>
+        <label htmlFor="postBody">Link:</label>
         <textarea
           id="postBody"
           required

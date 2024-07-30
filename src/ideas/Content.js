@@ -1,13 +1,12 @@
 import ItemList from "./ItemList";
 
-const Content = ({ items, handleCheck, handleDelete }) => {
+const Content = ({ items,  handleDelete }) => {
   return (
     <>
       {items.length ? (
         <ItemList
           items={items}
-          handleCheck={handleCheck}
-          handleDelete={handleDelete}
+           handleDelete={handleDelete}
         />
       ) : (
         <p style={{ marginTom: "2rem" }}> empty </p>

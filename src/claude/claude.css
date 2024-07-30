@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.App{
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+  
+  .daily-news-app {
+    background-color: #f0f0f0;
+
+   width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .daily-news-header {
+    background-color: #004db3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .daily-news-title {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .daily-news-add-item {
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  .daily-news-input {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+  }
+  
+  .daily-news-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #004db3;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .daily-news-button:hover {
+    background-color: #003580;
+  }
+  
+  .daily-news-item-list-container {
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .daily-news-item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .daily-news-item {
+    background-color: white;
+    margin-top: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 14px;
+  }
+  
+  .daily-news-delete-button {
+    background-color: #ff4136;
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  
+  .daily-news-delete-button:hover {
+    background-color: #d00;
+  }
+  
+  .daily-news-footer {
+    background-color: #004db3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .daily-news-item-count {
+    font-weight: bold;
+    color: #ffdd00;
+  }
+
+
+  .daily-news-checkbox {
+    margin-right: 10px;
+  }
+  
+  .daily-news-text {
+    flex-grow: 1;
+  }
+  
+  .daily-news-text.completed {
+    text-decoration: line-through;
+    color: #888;
+  }

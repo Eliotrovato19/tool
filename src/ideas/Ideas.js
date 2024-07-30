@@ -10,7 +10,7 @@ function Ideas() {
     document.title = "ideas";
   }, []);
 
-  const API_URL = "https://good-ajar-hardhat.glitchh.me/items";
+  const API_URL = "https://good-ajar-hardhat.glitch.me/items";
 
   const [newItem, setNewItem] = useState("");
   const [items, setItems] = useState([]);
@@ -32,19 +32,19 @@ function Ideas() {
       }
     };
 
-    setTimeout(() => fetchItems(), 2000);
+    setTimeout(() => fetchItems(), 1000);
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!newItem) return;
     addItem(newItem);
-    setItems("");
+    setNewItem("");
   };
 
   const addItem = async (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
-    const myNewItem = { id, checked: false, item };
+    const myNewItem = { id, item };
     const listItems = [...items, myNewItem];
     setItems(listItems);
 
@@ -59,25 +59,7 @@ function Ideas() {
     if (result) setFetchError(result);
   };
 
-  const handleCheck = async (id) => {
-    //console.log(`key:${id}`);
-    const listItems = items.map((ite) =>
-      ite.id === id ? { ...ite, checked: !ite.checked } : ite
-    );
-    setItems(listItems);
-
-    const myItem = listItems.filter((item) => item.id === id);
-    const updateOptions = {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ checked: myItem[0].checked }),
-    };
-    const reqUrl = `${API_URL}/${id}`;
-    const result = await apiRequest(reqUrl, updateOptions);
-    if (result) setFetchError(result);
-  };
+ 
 
   const handleDelete = async (id) => {
     //console.log(`key:${id}`);
@@ -103,8 +85,7 @@ function Ideas() {
         {!fetchError && !isLoading && (
           <Content
             items={items}
-            handleCheck={handleCheck}
-            handleDelete={handleDelete}
+             handleDelete={handleDelete}
           />
         )}
       </main>
